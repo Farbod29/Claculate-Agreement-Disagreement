@@ -175,7 +175,7 @@ Simpson's Diversity Index (DI) is a measure of diversity that was introduced by 
 
  <img width="75%" src = "https://user-images.githubusercontent.com/17232450/103107674-da584000-4640-11eb-91c1-d243c23fe7ec.png"> 
 
-according to previous sectoins → DI=GD=(1-Pi)  
+according to previous sectoins → SDI=GD=(1-Pi)  
 ```
 //=================  Simpson's index of diversity ==========================
 {
