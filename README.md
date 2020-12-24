@@ -1,4 +1,4 @@
-# Calculate-Agreement-Disagreement and Javascript Implementation:
+# Calculate-Agreement-Disagreement (Javascript Implementation for each Formula):
 
 Measures of Disagreement/Agreement level that the number of voters is more than the selected categories.
 Calculation dis/agreement for the group is important for collective status statistics and opinion, also matter of interest in physiological and social apps to have an overall view and understanding of students within the group of teenage students about specific social objects with limited choices. 
@@ -198,7 +198,7 @@ Figure 1 shows the values of disagreement resulting from the measures DI, GD, SD
 factor ( [𝑁2 − 𝑁 ]) instead of [ 𝑁2 − 𝑁2 (1)] ). This difference has a consequence for the possible maximum 𝐾
 values, which is especially relevant when the number of categories is lower than the number of raters. As already noted by Whitworth (2007), the maximum value of GD tends to approach (K – 1) / K for a high number of raters, which amounts to 0.5 for K = 2. The normalization factor of DI corrects for this cap in the range of values. Based on this analysis, we have chosen to use DI as our measure of disagreement.
 
-if you run the provided JS file the output will be:
+if you run the JS provided html file the output will be:
 
  <img width="79%" src = "https://user-images.githubusercontent.com/17232450/103107765-c3feb400-4641-11eb-8813-936671a78979.png">
 
