@@ -32,6 +32,7 @@ like below:
 
 ### 1. Dispersion index (DI):
 The “dispersion index” (DI) is one of the few genuine statistical dispersion measures that work with nominal or categorical variables. We rely on the description and definition given by Walker (1999) [1]:
+
 ![Screenshot 2020-12-24 at 21 27 22](https://user-images.githubusercontent.com/17232450/103105551-d0c5dc80-462e-11eb-973c-112df449cbc4.png)
 
 code:
@@ -86,16 +87,17 @@ eter of Fleiss' kappa, which only works when evaluating raters' agreement reflec
 ```
 ### 3.Group disagreement (GD):
 To quantify disagreement, Whitworth (2007) has introduced a measure that builds up an overall disagreement value from pairwise individual disagreement values forming a “disagreement matrix” (dij). The binary value dij is 0 if the two raters i and j have given different ratings (or tags), otherwise it is 1 (including for the diagonal values dii).[3] An individual's disagreement (di) with the rest of the group is then the sum of disagreements with each other group member, divided by the number of pairs (n-1):
- <img width="33%" src = "https://user-images.githubusercontent.com/17232450/103107208-5a2fdb80-463c-11eb-9e79-d8f8bf50b803.png">
+
+ <img width="73%" src = "https://user-images.githubusercontent.com/17232450/103107208-5a2fdb80-463c-11eb-9e79-d8f8bf50b803.png">
 
 The overall group disagreement is then the average of the disagreement of all its members.
 If all raters and ratings agree (unanimously), the value GD will be 0. The maximum possible value 1 of group disagreement can only be reached if there are at least as many categories as there are raters (otherwise some raters would have to coincide in their ratings). GD is actually a genuine measure of disagreement. To make it comparable to the other measures targeting agreement, we can move to “group agreement” GA defined as 1 – GD. These measures can be formulated in the same way using an “agreement matrix” (aij) where aij = 1 - dij. Here, the aij values can be grouped and summed up in terms of the frequencies per category (for reasons of space, this cannot be fully elaborated here):
  
- <img width="33%" src = "https://user-images.githubusercontent.com/17232450/103107224-792e6d80-463c-11eb-85e0-045a197c8a58.png">
+ <img width="43%" src = "https://user-images.githubusercontent.com/17232450/103107224-792e6d80-463c-11eb-85e0-045a197c8a58.png">
 
 Given that the sum of frequencies over all categories is equal to the number of raters, i.e. we can rewrite the above formula:
 
- <img width="33%" src = "https://user-images.githubusercontent.com/17232450/103107237-96fbd280-463c-11eb-87ba-9f399102cef9.png">
+ <img width="73%" src = "https://user-images.githubusercontent.com/17232450/103107237-96fbd280-463c-11eb-87ba-9f399102cef9.png">
 The resulting formula is identical to the one of 𝑭𝑲 (Fleiss' kappa), i.e. 𝑮𝑨 = 𝟏 − 𝑮𝑫 = 𝑭𝑲 .
 
 ```
@@ -133,10 +135,12 @@ The resulting formula is identical to the one of 𝑭𝑲 (Fleiss' kappa), i.e. 
 ```
 ### 4. Entropy-based diversity index (H)
   Diversity or disagreement in a community can also be measured by the entropy using Shannon’s formula (counting only non-empty categories):
-  <img width="33%" src = "https://user-images.githubusercontent.com/17232450/103107269-d2969c80-463c-11eb-895c-2506646769e3.png"> 
+  
+  <img width="24%" src = "https://user-images.githubusercontent.com/17232450/103107269-d2969c80-463c-11eb-895c-2506646769e3.png"> 
 
  The highest value for the Shannon measure is log⁡(n). The Normalized formula is:
-  <img width="33%" src = "https://user-images.githubusercontent.com/17232450/103107282-ecd07a80-463c-11eb-9a93-5bc3d47ee5cf.png"> 
+ 
+  <img width="16%" src = "https://user-images.githubusercontent.com/17232450/103107282-ecd07a80-463c-11eb-9a93-5bc3d47ee5cf.png"> 
 
 ```
 //=================Shanon diversity index ==========================
@@ -167,7 +171,8 @@ The resulting formula is identical to the one of 𝑭𝑲 (Fleiss' kappa), i.e. 
 ### 5.Simpson’s Diversity Index (SDI)
 
 Simpson's Diversity Index (DI) is a measure of diversity that was introduced by Edward H. Simpson in 1949. It is often used in ecology to quantify the biodiversity of an environment [4]. Simpson's index takes into account the number of species present, as well as the abundance of each species. It can be used to quantify the diversity of a community also in the statistical calculation, for the modern application it can consider as disagreement measure among the raters.
- <img width="33%" src = "https://user-images.githubusercontent.com/17232450/103107674-da584000-4640-11eb-91c1-d243c23fe7ec.png"> 
+
+ <img width="71%" src = "https://user-images.githubusercontent.com/17232450/103107674-da584000-4640-11eb-91c1-d243c23fe7ec.png"> 
 
 according to previous sectoins → DI=GD=(1-Pi)  
 ```
@@ -184,7 +189,7 @@ according to previous sectoins → DI=GD=(1-Pi)
  }
 //===========================
 ```
- <img width="23%" src = "https://user-images.githubusercontent.com/17232450/103107682-eb08b600-4640-11eb-9ebf-0dc3c364aae9.png"> 
+ <img width="93%" src = "https://user-images.githubusercontent.com/17232450/103107682-eb08b600-4640-11eb-9ebf-0dc3c364aae9.png"> 
  
 Figure 1. Values of disagreement for different measures (1 item, 6 raters, 4 possible tags).
 
@@ -204,10 +209,17 @@ fa@rias-institute.eu
 
 
 ### REFERENCES 
+
 [1]  Walker, Jeffery T. Statistics in criminal justice: Analysis and interpretation. Jones & Bartlett Learning, 1999.
+
 [2]  Fleiss, J. L. (1971) "Measuring nominal scale agreement among many raters." Psychological Bulletin, Vol.    76, No. 5 pp. 378–382
+
 [3] Whitworth, Gallupe, & McQueen, 2000. “Measuring Disagreement”
+
 [4] Magurran, A. E. 1988. Ecological Diversity and its Measurement. Princeton University Press, Princeton, NJ.
-[5] Shannon, Claude E. "A mathematical theory of communication." The Bell system technical journal 27.3 (1948): 379-423. https://pure.mpg.de/rest/items/item_2383162_7/component/file_2456978/content
-[6] ROBERT K. PEET , RELATIVE DIVERSITY INDICES1 
- https://pdfs.semanticscholar.org/eda4/19a5287c9a6e6ceaae05763473c882ab1ca9.pdf
+
+[5] Shannon, Claude E. "A mathematical theory of communication." The Bell system technical journal 27.3 (1948): 379-423.
+
+https://pure.mpg.de/rest/items/item_2383162_7/component/file_2456978/content
+
+[6] ROBERT K. PEET , RELATIVE DIVERSITY INDICES1 https://pdfs.semanticscholar.org/eda4/19a5287c9a6e6ceaae05763473c882ab1ca9.pdf
