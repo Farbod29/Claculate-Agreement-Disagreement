@@ -24,11 +24,11 @@ here if we have different tree images and six students (N=6) has to vote and cho
 like below: 
 <p align="center" width="100%">
     [6,0,0,0]
-    <img width="26%" src="https://user-images.githubusercontent.com/17232450/103105085-a45c9100-462b-11eb-8bf8-41569969514e.png"> 
+    <img width="23%" src="https://user-images.githubusercontent.com/17232450/103105085-a45c9100-462b-11eb-8bf8-41569969514e.png"> 
     [3,1,1,1]
-    <img width="26%" src="https://user-images.githubusercontent.com/17232450/103105183-5431fe80-462c-11eb-8198-aa0407751c7b.png"> 
+    <img width="23%" src="https://user-images.githubusercontent.com/17232450/103105183-5431fe80-462c-11eb-8198-aa0407751c7b.png"> 
     [2,2,1,1]                                                                                                                             
-    <img width="26%" src="https://user-images.githubusercontent.com/17232450/103105335-77a97900-462d-11eb-8c16-1d9bee2259ad.png"> 
+    <img width="23%" src="https://user-images.githubusercontent.com/17232450/103105335-77a97900-462d-11eb-8c16-1d9bee2259ad.png"> 
 </p>
 
 ### 1. Dispersion index (DI):
