@@ -190,9 +190,9 @@ according to previous sectoins → DI=GD=(1-Pi)
  }
 //===========================
 ```
- <img width="93%" src = "https://user-images.githubusercontent.com/17232450/103107682-eb08b600-4640-11eb-9ebf-0dc3c364aae9.png"> 
+ <img width="105%" src = "https://user-images.githubusercontent.com/17232450/103107682-eb08b600-4640-11eb-9ebf-0dc3c364aae9.png"> 
  
-Figure 1. Values of disagreement for different measures (1 item, 6 raters, 4 possible tags).
+            **Figure 1. Values of disagreement for different measures (1 item, 6 raters, 4 possible tags)**
 
 Figure 1 shows the values of disagreement resulting from the measures DI, GD, SDI (equal to 1 – FK) and H (entropy) for a simple situation with 6 raters giving one rating each for one item. We consider A, B, C, D as possible categorical values (however not necessarily all used). The set of example ratings is AAAAAA, AAAAAB, AAAABB, AAAABC, AAABBB, AABBCC, AAABCD, and AABBCD. The values of GD and DI appear to be very similar. A more detailed analysis shows that they only differ only in terms of the normalization
 factor ( [𝑁2 − 𝑁 ]) instead of [ 𝑁2 − 𝑁2 (1)] ). This difference has a consequence for the possible maximum 𝐾
