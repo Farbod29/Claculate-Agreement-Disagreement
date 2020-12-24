@@ -15,10 +15,10 @@ Methods which are selected for this document are :
 If these measures are normalized on a scale ranging from 0 to 1, this correspondence is expressed by the equation D = 1 – A. In this sense, dispersion and 
 entropy are D-measures whereas inter-rater reliability id an A-measure.
 
-Our interest is to calculate the dis/agreement for the cases in which the number of categories **K= 4** are lower than the number of voters (participants) 
+Our interest is to calculate the dis/agreement for the cases in which the number of categories **K** are lower than the number of voters (participants) 
 **N**, then we have **N>K**.
-One example of the approach that we are could be a task for the group of students  **N** N=6 (thirty students) has to categorize an artifact which can be a 
-single image into the different categories **K= 4** categories can be "Hate," "discrimination," "Cyber bullying" and none. 
+One example of the approach that we are could be a task for the group of students  **N=6**  (thirty students) has to categorize an artifact which can be a 
+single image into the different categories **K=4** categories can be "Hate," "discrimination," "Cyber bullying" and none. 
 when all students vote for Hate, then the expected **Disagreement = 0**.  
 here if we have different tree images and six students (N=6) has to vote and choose between the mentioned 4 categories (K=4), the desired result will be sth
 like below: 
