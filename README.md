@@ -203,7 +203,8 @@ if you run the provided JS file the output will be:
  <img width="79%" src = "https://user-images.githubusercontent.com/17232450/103107765-c3feb400-4641-11eb-8813-936671a78979.png">
 
 
-The above article where writen under the supervison and contribution of RIAS institute. thanks Prof. H. U Hoppe and Nils Malsen.
+The above article where writen under the supervison and contribution of RIAS institute. special thanks Prof. H. U Hoppe and Nils Malsen.
+
 For any further question please dont hesitae to contact us:
 
 fa@rias-institute.eu 
