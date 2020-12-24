@@ -1,15 +1,20 @@
-## Calculate-Agreement-Disagreement
+## Calculate-Agreement-Disagreement and Javascript Implementation:
 Measures of Disagreement/Agreement level that the number of voters is more than the selected categories.
 Calculation dis/agreement for the group is important for collective status statistics and opinion, also matter of interest in physiological and social apps to have an overall view and understanding of students within the group of teenage students about specific social objects with limited choices. 
-In this overview, we define and compare the methods to calculate the dis/agreement. Which their JS functions. The whole functions can also be found inside of the GitHub document. 
+In this overview, we define and compare the methods to calculate the dis/agreement. Which their JS functions. The whole functions can also be found inside of
+the GitHub document. 
 Methods which are selected for this document are :
 
-If these measures are normalized on a scale ranging from 0 to 1, this correspondence is expressed by the equation D = 1 – A. In this sense, dispersion and entropy are D-measures whereas inter-rater reliability id an A-measure.
+If these measures are normalized on a scale ranging from 0 to 1, this correspondence is expressed by the equation D = 1 – A. In this sense, dispersion and 
+entropy are D-measures whereas inter-rater reliability id an A-measure.
 
-Our interest is to calculate the dis/agreement for the cases in which the number of categories **K= 4** are lower than the number of voters (participants) **N**, then we have **N>K**.
-One example of the approach that we are could be a task for the group of students  **N** N=6 (thirty students) has to categorize an artifact which can be a single image into the different categories **K= 4** categories can be "Hate," "discrimination," "Cyber bullying" and none. 
+Our interest is to calculate the dis/agreement for the cases in which the number of categories **K= 4** are lower than the number of voters (participants) 
+**N**, then we have **N>K**.
+One example of the approach that we are could be a task for the group of students  **N** N=6 (thirty students) has to categorize an artifact which can be a 
+single image into the different categories **K= 4** categories can be "Hate," "discrimination," "Cyber bullying" and none. 
 when all students vote for Hate, then the expected **Disagreement = 0**.  
-here if we have different tree images and six students (N=6) has to vote and choose between the mentioned 4 categories (K=4), the desired result will be sth like below: 
+here if we have different tree images and six students (N=6) has to vote and choose between the mentioned 4 categories (K=4), the desired result will be sth
+like below: 
 <p align="center" width="100%">
     [6,0,0,0]
     <img width="26%" src="https://user-images.githubusercontent.com/17232450/103105085-a45c9100-462b-11eb-8bf8-41569969514e.png"> 
@@ -20,7 +25,8 @@ here if we have different tree images and six students (N=6) has to vote and cho
 </p>
 
 ### 1. Dispersion index (DI):
-The “dispersion index” (DI) is one of the few genuine statistical dispersion measures that work with nominal or categorical variables. We rely on the description and definition given by Walker (1999) [1]:
+The “dispersion index” (DI) is one of the few genuine statistical dispersion measures that work with nominal or categorical variables. We rely on the descrip-
+tion and definition given by Walker (1999) [1]:
 ![Screenshot 2020-12-24 at 21 27 22](https://user-images.githubusercontent.com/17232450/103105551-d0c5dc80-462e-11eb-973c-112df449cbc4.png)
 
 code:
@@ -52,7 +58,9 @@ if (n === 0) {
     
 ### 2. Fleiss' kappa (Pi section of FK)
 
-Fleiss' kappa (Fleiss, 1971) is a statistical measure for evaluating the reliability of agreement between a fixed number of raters when assigning certain ratings to possibly multiple items. The Pi-value is normalized and measures agreement, so that 1 – Pi can serve as a D-measure. Pi parameter of Fleiss' kappa, which only works when evaluating raters' agreement reflection of raters for one specific artifact [2].
+Fleiss' kappa (Fleiss, 1971) is a statistical measure for evaluating the reliability of agreement between a fixed number of raters when assigning 
+certain ratings to possibly multiple items. The Pi-value is normalized and measures agreement, so that 1 – Pi can serve as a D-measure. Pi param-
+eter of Fleiss' kappa, which only works when evaluating raters' agreement reflection of raters for one specific artifact [2].
 
 <img width="73%" src = "https://user-images.githubusercontent.com/17232450/103105734-dff95a00-462f-11eb-979d-89a9881ab32e.png"> 
 
@@ -71,8 +79,119 @@ Fleiss' kappa (Fleiss, 1971) is a statistical measure for evaluating the reliabi
    document.write("<br>");
 }
 ```
+### 3.Group disagreement (GD):
+To quantify disagreement, Whitworth (2007) has introduced a measure that builds up an overall disagreement value from pairwise individual disagreement values forming a “disagreement matrix” (dij). The binary value dij is 0 if the two raters i and j have given different ratings (or tags), otherwise it is 1 (including for the diagonal values dii).[3] An individual's disagreement (di) with the rest of the group is then the sum of disagreements with each other group member, divided by the number of pairs (n-1):
+![Screenshot 2020-12-24 at 23 04 14](https://user-images.githubusercontent.com/17232450/103107208-5a2fdb80-463c-11eb-9e79-d8f8bf50b803.png)
 
+The overall group disagreement is then the average of the disagreement of all its members.
+If all raters and ratings agree (unanimously), the value GD will be 0. The maximum possible value 1 of group disagreement can only be reached if there are at least as many categories as there are raters (otherwise some raters would have to coincide in their ratings). GD is actually a genuine measure of disagreement. To make it comparable to the other measures targeting agreement, we can move to “group agreement” GA defined as 1 – GD. These measures can be formulated in the same way using an “agreement matrix” (aij) where aij = 1 - dij. Here, the aij values can be grouped and summed up in terms of the frequencies per category (for reasons of space, this
+ cannot be fully elaborated here):
+![Screenshot 2020-12-24 at 23 05 07](https://user-images.githubusercontent.com/17232450/103107224-792e6d80-463c-11eb-85e0-045a197c8a58.png)
+Given that the sum of frequencies over all categories is equal to the number of raters, i.e. we can rewrite the above formula:
 
+![Screenshot 2020-12-24 at 23 05 55](https://user-images.githubusercontent.com/17232450/103107237-96fbd280-463c-11eb-87ba-9f399102cef9.png)
+The resulting formula is identical to the one of 𝑭𝑲 (Fleiss' kappa), i.e. 𝑮𝑨 = 𝟏 − 𝑮𝑫 = 𝑭𝑲 .
 
+```
+//================Group Disagreement=========================
+{
+   let n = 0;
+   catNs.map(x => (n = x + n));
+   //  println("number of students:");
+   //  println(n);
+   let disagreement = 0;
+   let allSum = 0; // sum up all individual disagree
+   //let frequency = 0;// number of voters for each category
+   for (const frequency of catNs) { //runs over categories, frequency is the number of voter for each category
+   // println(frequency);
+   disagreement = n - frequency; // as mentioned in the paper we want to find the idea of the voter in comparison from rest of the ,
+   // println("disagreement :"); // means if the group is empty then the ==>
+   // println(disagreement);
+   switch (frequency) {
+       case (0) :
+         disagreement = 0; // ==> disagreement will be zero (no one participate in X category)
+         break;
+       case (1) :
+         allSum += (disagreement); //==> means just one person will be in x category and all other voters has different ideas (n-1 voters are        disagree)
+         break;
+       default  :
+         allSum += (disagreement * frequency);// ==> A AAAB in this case frequency is (A.frequency) = 4,
+         // or we can say A happend 4 times, then instead of looping and calculation disagreement for each
+         // A (vote) we consider one dis*frequency(number of voters for each category).
+         }
+    }
+    GroupOfDisagreement = (allSum / (n * (n - 1)));
+    //GroupOfAgreement = 1 - GroupOfDisagreement;
+     println("GD : " + GroupOfDisagreement);
+}
+```
+### 4. Entropy-based diversity index (H)
+  Diversity or disagreement in a community can also be measured by the entropy using Shannon’s formula (counting only non-empty categories):
+![Screenshot 2020-12-24 at 23 07 36](https://user-images.githubusercontent.com/17232450/103107269-d2969c80-463c-11eb-895c-2506646769e3.png)
 
+ The highest value for the Shannon measure is log⁡(n). The Normalized formula is:
+
+![Screenshot 2020-12-24 at 23 08 21](https://user-images.githubusercontent.com/17232450/103107282-ecd07a80-463c-11eb-9a93-5bc3d47ee5cf.png)
+```
+//=================Shanon diversity index ==========================
+{
+   let k = 4;
+   let fk = 0;
+   let n = 0;
+   let shannon = 0;
+   let e = Math.exp(1);
+   catNs.map(x => (n = x + n));
+
+   function CalculateSpi(fk) {
+        return (fk / n);
+   }
+
+   catNs.map(fk => shannon += ((CalculateSpi(fk)) * getBaseLog(e, CalculateSpi(fk))));
+   document.write("Shanon Diversity :  " + (-1) * shannon);
+   document.write("<br>");
+   document.write("Normalised Shanon Diversity :  " + ((-1) * shannon) / getBaseLog(e, n));//Math.E() Euler's number constant = 2.718281828459045
+   document.write("<br>");
+   //document.write(getBaseLog(e, n));
+   //document.write("Normalised and round the result of Shanon Diversity :  " +  Math.round(((-1) * shannon) / getBaseLog(e, n)) );//Math.E() Euler's number        constant = 2.718281828459045
+   //document.write("Normalised Shanon Diversity :  " + ((-1) * shannon)/1.3862943611199137);
+   document.write("<br>");
+   }
+```
+
+### 5.Simpson’s Diversity Index (SDI)
+
+Simpson's Diversity Index (DI) is a measure of diversity that was introduced by Edward H. Simpson in 1949. It is often used in ecology to quantify the biodiversity of an environment [4]. Simpson's index takes into account the number of species present, as well as the abundance of each species. It can be used to quantify the diversity of a community also in the statistical calculation, for the modern application it can consider as disagreement measure among the raters.
+
+![Screenshot 2020-12-24 at 23 36 26](https://user-images.githubusercontent.com/17232450/103107674-da584000-4640-11eb-91c1-d243c23fe7ec.png)
+
+according to previous sectoins → DI=GD=(1-Pi)  
+```
+//=================  Simpson's index of diversity ==========================
+{
+    //document.write(getBaseLog(2.718281828459, 0.05));
+    //let k = 4;
+    let sumFk = 0;
+    let n = 0;
+    catNs.map(x => (n = x + n));
+    catNs.map(fk => sumFk += (fk) * (fk - 1));
+    let simpson = (1 - (sumFk / (n * (n - 1))));
+    document.write("Simpson's index :  " + simpson);
+ }
+//===========================
+```
+
+https://user-images.githubusercontent.com/17232450/103107682-eb08b600-4640-11eb-9ebf-0dc3c364aae9.png
+Figure 1. Values of disagreement for different measures (1 item, 6 raters, 4 possible tags).
+
+Figure 1 shows the values of disagreement resulting from the measures DI, GD, SDI (equal to 1 – FK) and H (entropy) for a simple situation with 6 raters giving one rating each for one item. We consider A, B, C, D as possible categorical values (however not necessarily all used). The set of example ratings is AAAAAA, AAAAAB, AAAABB, AAAABC, AAABBB, AABBCC, AAABCD, and AABBCD. The values of GD and DI appear to be very similar. A more detailed analysis shows that they only differ only in terms of the normalization
+factor ( [𝑁2 − 𝑁 ]) instead of [ 𝑁2 − 𝑁2 (1)] ). This difference has a consequence for the possible maximum 𝐾
+values, which is especially relevant when the number of categories is lower than the number of raters. As already noted by Whitworth (2007), the maximum value of GD tends to approach (K – 1) / K for a high number of raters, which amounts to 0.5 for K = 2. The normalization factor of DI corrects for this cap in the range of values. Based on this analysis, we have chosen to use DI as our measure of disagreement
+
+![Screenshot 2020-12-24 at 23 42 59](https://user-images.githubusercontent.com/17232450/103107765-c3feb400-4641-11eb-8813-936671a78979.png)
+)
+
+The above article where writen under supervison and contribution of RIAS institute. thanks Prof. H. U Hoppe and Nils Malsen.
+For any further question please dont hesitae to contact us:
+
+fa@rias-institute.eu 
 
