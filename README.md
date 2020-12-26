@@ -194,8 +194,8 @@ according to previous sectoins → SDI=GD=(1-Pi)
 
  <img width="95%" src = "https://user-images.githubusercontent.com/17232450/103150715-dcbcb600-4776-11eb-8ce6-0f6cbf8c5650.png"> 
  
-                  Figure 1. Values of disagreement for different measures (1 item, 6 raters, 4 possible tags) 
-                     in this case for x axel we consider voting for new category increases more divergence 
+                       Figure 1. Values of disagreement for different measures (1 item, 6 raters, 4 possible tags) 
+                     in this case for x axel we consider that the voting for new category increases the disagreement 
                                [3,3,0,0](K=2) [4,1,1,0](K=3) but its an optinal choice
                  
 
