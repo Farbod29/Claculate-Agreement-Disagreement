@@ -191,7 +191,7 @@ according to previous sectoins → SDI=GD=(1-Pi)
  }
 //===========================
 ```
- <img width="105%" src = "https://user-images.githubusercontent.com/17232450/103107682-eb08b600-4640-11eb-9ebf-0dc3c364aae9.png"> 
+ <img width="105%" src = ""> 
  
             **Figure 1. Values of disagreement for different measures (1 item, 6 raters, 4 possible tags)**
 
