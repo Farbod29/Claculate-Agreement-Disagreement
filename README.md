@@ -1,6 +1,7 @@
 # Calculate-Agreement-Disagreement (Javascript Implementation for each Formula):
 
-Measures of Disagreement/Agreement level that the number of voters is more than the selected categories.
+*Measures of Disagreement/Agreement level that the number of voters is more than the selected categories.
+
 Calculation dis/agreement for the group is important for collective status statistics and opinion, also matter of interest in physiological and social apps to have an overall view and understanding of students within the group of teenage students about specific social objects with limited choices. 
 In this overview, we define and compare the methods to calculate the dis/agreement. Which their JS functions. The whole functions can also be found inside of
 the GitHub document. 
