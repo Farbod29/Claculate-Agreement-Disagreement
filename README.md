@@ -21,8 +21,8 @@ Our interest is to calculate the dis/agreement for the cases in which the number
 One example of the approach that we are could be a task for the group of students  **N=6**  (thirty students) has to categorize an artifact which can be a 
 single image into the different categories **K=4**. The categories can be "Hate," "discrimination," "Cyber bullying" and none. 
 when all students vote for Hate, then the expected is **Disagreement = 0**.  
-here if we have different tree images and six students (N=6) has to vote and choose between the mentioned 4 categories (K=4), the desired result will be sth
-like below: 
+Here if we have different tree images and six students (N=6) has to vote and choose between the mentioned 4 categories (K=4), the desired result will be somethinglike below:
+
 <p align="center" width="100%">
     [6,0,0,0]
     <img width="23%" src="https://user-images.githubusercontent.com/17232450/103105085-a45c9100-462b-11eb-8bf8-41569969514e.png"> 
