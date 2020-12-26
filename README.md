@@ -209,7 +209,7 @@ if you run the JS provided html file the output will be:
 
 To avoid NAN number devided by zero (infinite) for the Shanon Entropy method you can consider ε Epsilon number for zero cases for example (0.00000000001). 
 
- <img width="105%" src = "https://user-images.githubusercontent.com/17232450/103150714-daf2f280-4776-11eb-83bb-034246dacaeb.png"> 
+ <img width="79%" src = "https://user-images.githubusercontent.com/17232450/103150714-daf2f280-4776-11eb-83bb-034246dacaeb.png"> 
  
 The above article where writen under the supervison and contribution of RIAS institute. special thanks Prof. H. U Hoppe and Nils Malsen.
 
