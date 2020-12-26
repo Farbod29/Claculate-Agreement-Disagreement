@@ -191,7 +191,8 @@ according to previous sectoins → SDI=GD=(1-Pi)
  }
 //===========================
 ```
- <img width="105%" src = ""> 
+
+ <img width="105%" src = "https://user-images.githubusercontent.com/17232450/103150715-dcbcb600-4776-11eb-8ce6-0f6cbf8c5650.png"> 
  
             **Figure 1. Values of disagreement for different measures (1 item, 6 raters, 4 possible tags)**
 
@@ -203,7 +204,10 @@ if you run the JS provided html file the output will be:
 
  <img width="79%" src = "https://user-images.githubusercontent.com/17232450/103107765-c3feb400-4641-11eb-8813-936671a78979.png">
 
+To avoid NAN number devided by zero (infinite) for the Shanon Entropy method you can consider ε Epsilon number for zero cases for example (0.00000000001). 
 
+ <img width="105%" src = "https://user-images.githubusercontent.com/17232450/103150714-daf2f280-4776-11eb-83bb-034246dacaeb.png"> 
+ 
 The above article where writen under the supervison and contribution of RIAS institute. special thanks Prof. H. U Hoppe and Nils Malsen.
 
 For any further question please dont hesitae to contact us:
