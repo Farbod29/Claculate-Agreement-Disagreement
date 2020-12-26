@@ -194,8 +194,10 @@ according to previous sectoins → SDI=GD=(1-Pi)
 
  <img width="95%" src = "https://user-images.githubusercontent.com/17232450/103150715-dcbcb600-4776-11eb-8ce6-0f6cbf8c5650.png"> 
  
-             **Figure 1. Values of disagreement for different measures (1 item, 6 raters, 4 possible tags) in this case for x axel we consider voting for new category increases more divergence [3,3,0,0](K=2) [4,1,1,0](K=3) but its an optinal**
-             
+                  Figure 1. Values of disagreement for different measures (1 item, 6 raters, 4 possible tags) 
+                     in this case for x axel we consider voting for new category increases more divergence 
+                               [3,3,0,0](K=2) [4,1,1,0](K=3) but its an optinal choice
+                 
 
 Figure 1 shows the values of disagreement resulting from the measures DI, GD, SDI (equal to 1 – FK) and H (entropy) for a simple situation with 6 raters giving one rating each for one item. We consider A, B, C, D as possible categorical values (however not necessarily all used). The set of example ratings is AAAAAA, AAAAAB, AAAABB, AAAABC, AAABBB, AABBCC, AAABCD, and AABBCD. The values of GD and DI appear to be very similar. A more detailed analysis shows that they only differ only in terms of the normalization
 factor ( [𝑁2 − 𝑁 ]) instead of [ 𝑁2 − 𝑁2 (1)] ). This difference has a consequence for the possible maximum 𝐾
