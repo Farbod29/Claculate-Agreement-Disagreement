@@ -238,3 +238,10 @@ https://pure.mpg.de/rest/items/item_2383162_7/component/file_2456978/content
 [6] ROBERT K. PEET , RELATIVE DIVERSITY INDICES1 https://pdfs.semanticscholar.org/eda4/19a5287c9a6e6ceaae05763473c882ab1ca9.pdf
 
 #code#github#Code#Github#agreement#calculate#agreementmethod#
+
+
+# calculate disagreement formula javascript code github
+calculate disagreement formula javascript code github
+calculate disagreement formula javascript code github
+calculate disagreement formula javascript code github
+calculate disagreement formula javascript code github
